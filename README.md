@@ -38,6 +38,10 @@ Output
 
 decomply will traverse the dictionary, stopping at certain points. Then it will apply the desired function on the value at hand and "repeat" the process. In a sense, it decomposes the object into a partition and then applies a function on each part, hence the name decomposeApply, in short `decomply`
 
+<h2>Install</h2>
+
+`pip install decomply`
+
 <h2>API</h2>
 
 <h3>Decomply</h3>
