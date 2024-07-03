@@ -174,4 +174,4 @@ Output
 }
 ~~~
 
-I published a use case in my jsgui package, feel free to check it out for more complex examples.
+I published a use case in my [jsgui](https://github.com/TrueKenji/jsgui) package, feel free to check it out for more complex examples.
