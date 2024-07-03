@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: decomply
-Version: 1.0.0
+Version: 1.1.1
 Summary: decomply allows unified processing of nested dictionaries
 Home-page: https://github.com/truekenji/decomply
 Author: TrueKenji
@@ -9,6 +9,7 @@ Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
 Description-Content-Type: text/markdown
+Requires-Dist: numpy
 
 <h1>decomply</h1>
 decomply (decomposeApply) is a short utility package, providing functionality to traverse nested dictionaries (or any enumerable object) and apply a custom function on their values.

@@ -6,6 +6,7 @@ decomply/enumerable.py
 decomply.egg-info/PKG-INFO
 decomply.egg-info/SOURCES.txt
 decomply.egg-info/dependency_links.txt
+decomply.egg-info/requires.txt
 decomply.egg-info/top_level.txt
 decomply/tests/__init__.py
 decomply/tests/test.py
