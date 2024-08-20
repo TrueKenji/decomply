@@ -1,4 +1,4 @@
-from typing import Hashable, ItemsView
+from typing import Hashable, ItemsView, Set
 from abc import ABC, abstractmethod
 
 
@@ -100,7 +100,7 @@ class DictHandler(EnumerableHandler):
         return key in item
 
 
-_handlers: set[EnumerableHandler] = {ListHandler(), DictHandler()}
+_handlers: Set[EnumerableHandler] = {ListHandler(), DictHandler()}
 
 
 def get_handler(item):

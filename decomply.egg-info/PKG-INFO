@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: decomply
-Version: 1.1.1
+Version: 1.1.2
 Summary: decomply allows unified processing of nested dictionaries
 Home-page: https://github.com/truekenji/decomply
 Author: TrueKenji
@@ -50,6 +50,10 @@ Output
 ~~~
 
 decomply will traverse the dictionary, stopping at certain points. Then it will apply the desired function on the value at hand and "repeat" the process. In a sense, it decomposes the object into a partition and then applies a function on each part, hence the name decomposeApply, in short `decomply`
+
+<h2>Install</h2>
+
+`pip install decomply`
 
 <h2>API</h2>
 
@@ -187,4 +191,4 @@ Output
 }
 ~~~
 
-I published a use case in my jsgui package, feel free to check it out for more complex examples.
+I published a use case in my [jsgui](https://github.com/TrueKenji/jsgui) package, feel free to check it out for more complex examples.

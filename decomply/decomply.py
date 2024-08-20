@@ -1,7 +1,7 @@
 from typing import List, Union
 import copy
 import numpy as np
-from decomply.enumerable import EnumerableHandler, ListHandler, DictHandler
+from decomply.enumerable import EnumerableHandler, ListHandler, DictHandler, Set
 
 
 class Decomply:
@@ -14,7 +14,7 @@ class Decomply:
         traverse: callable = lambda trace, item: True,
         apply: callable = lambda trace, item: item,
         delete: callable = lambda trace, item: str(trace[-1]).startswith("_"),
-        handlers: set[EnumerableHandler] = None
+        handlers: Set[EnumerableHandler] = None
     ):
         """
         Initialize the Decomply object
@@ -34,7 +34,7 @@ class Decomply:
             takes two arguments: `trace` (list) - the current trace, and `item` (any) -
             the current item associated with the trace. Defaults to deleting keys that
             start with an underscore (`key.startswith("_")`).
-        handlers (set[EnumerableHandler], optional): A set of @EnumerableHandlers. 
+        handlers (Set[EnumerableHandler], optional): A set of @EnumerableHandlers. 
             Such a handler must implement methods to allow handling of an enumerable 
             object. Users may write their own handlers and supply them here, to 
             extend support. In basekit, only list and dict is supported.
@@ -44,7 +44,7 @@ class Decomply:
         self.apply = apply
         self.delete = delete
 
-        self.handlers: set[EnumerableHandler] = {ListHandler(), DictHandler()}
+        self.handlers: Set[EnumerableHandler] = {ListHandler(), DictHandler()}
         if handlers:
             self.handlers.update(handlers)
 
@@ -74,7 +74,7 @@ class Decomply:
         if isinstance(trace, type(None)):
             trace = list()
         if initial_check and not self.traverse(trace, item):
-            return self.apply(item, copy.deepcopy(trace))
+            return self.apply(copy.deepcopy(trace), item)
         return self._decomply(trace, item)
 
     def _decomply(self, trace: List[Union[str, int]], item: Union[dict, list, any]) -> Union[dict, list, any]:

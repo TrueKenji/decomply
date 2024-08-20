@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='decomply',
-    version='1.1.1',
+    version='1.1.2',
     packages=find_packages(),
     description='decomply allows unified processing of nested dictionaries',
     long_description=open('README.md').read(),
